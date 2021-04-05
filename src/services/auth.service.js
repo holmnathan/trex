@@ -2,12 +2,13 @@ import axios from 'axios';
 
 const { REACT_APP_TREX_API_URL } = process.env;
 
-const register = async (fullName, email, password) => {
+const register = async (email, password, fullName, displayName) => {
   try {
     const user = await axios.post(`${REACT_APP_TREX_API_URL}/user/register`, {
-      fullName,
       email,
       password,
+      fullName,
+      displayName,
     });
     return user;
   } catch (error) {
