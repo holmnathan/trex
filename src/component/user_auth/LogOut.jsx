@@ -1,18 +1,30 @@
 import React from 'react';
+import Modal from '../Modal';
+import { Link } from 'react-router-dom';
 
-const LogOut = () => (
-  <div>
-    <h1 className="title is-1">Log Out</h1>
+const LogOut = () => {
+  const header = <h2>Thanks For Stopping By!</h2>;
+
+  const body = (
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+      Probabo, inquit, modo dixi, constituto, ut earum motus et aperta iudicari
+      ea commodi. Omne animal, simul atque natum sit, aspernatur aut odit aut ad
+      respondendum reddidisti. Certe, inquam, pertinax non intellegamus, tu tam
+      inportuno tamque crudeli; sin, ut ita.
     </p>
-  </div>
-);
+  );
+
+  const footer = (
+    <Link className="btn btn-primary" to="/">
+      Home
+    </Link>
+  );
+
+  return (
+    <Modal header={header} footer={footer}>
+      {body}
+    </Modal>
+  );
+};
 
 export default LogOut;
